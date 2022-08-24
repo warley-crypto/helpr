@@ -24,6 +24,11 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
+    path: 'clientes',
+    loadChildren: () => import('./components/clientes/clientes.module').then(m => m.ClientesModule),
+    canActivate: [AuthGuard]
+  },
+  {
     path: "logout",
     component: ExitComponent,
     canActivate: [AuthGuard]
