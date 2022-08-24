@@ -19,13 +19,18 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
+    path: 'clientes',
+    loadChildren: () => import('./components/clientes/clientes.module').then(m => m.ClientesModule),
+    canActivate: [AuthGuard]
+  },
+  {
     path: 'tecnicos',
     loadChildren: () => import('./components/tecnicos/tecnicos.module').then(m => m.TecnicosModule),
     canActivate: [AuthGuard]
   },
   {
-    path: 'clientes',
-    loadChildren: () => import('./components/clientes/clientes.module').then(m => m.ClientesModule),
+    path: 'chamados',
+    loadChildren: () => import('./components/chamados/chamados.module').then(m => m.ChamadosModule),
     canActivate: [AuthGuard]
   },
   {
