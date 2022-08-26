@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ChamadosComponent } from './chamados.component';
 import { ChamadoCreateComponent } from './childrens/chamado-create/chamado-create.component';
+import { ChamadoUpdateComponent } from './childrens/chamado-update/chamado-update.component';
 
 const routes: Routes = [
   {
@@ -11,6 +12,10 @@ const routes: Routes = [
   {
     path: "new",
     component: ChamadoCreateComponent
+  },
+  {
+    path: "edit/:id",
+    component: ChamadoUpdateComponent
   }
 ];
 
